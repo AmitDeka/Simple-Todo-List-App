@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$ff-tektur: "Tektur", cursive;
+$color-primary: #ffcb74;
+$color-light: #f6f6f6;
+$color-dark: #111111;
+$color-dark-2: #2f2f2f;
+
+body {
+  align-items: center;
+  background-color: $color-dark;
+  color: $color-light;
+  display: flex;
+  flex-direction: column;
+  font-family: $ff-tektur;
+  font-size: 1rem;
+  justify-content: space-between;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.ToDoCard {
+  background-color: $color-dark-2;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 5px 10px 61px 0px rgba($color-dark-2, 0.8);
+  -moz-box-shadow: 5px 10px 61px 0px rgba($color-dark-2, 0.8);
+  box-shadow: 5px 10px 61px 0px rgba($color-dark-2, 0.8);
+  margin: 3rem 0;
+  padding: 2rem;
+  width: 600px;
+  &_header {
+    align-items: center;
+    display: inline-flex;
+    h1 {
+      font-size: 3rem;
+      margin-right: 1rem;
+    }
+    img {
+      height: auto;
+      max-width: 100%;
+      width: 3.5rem;
+    }
+  }
+  &_body {
+    padding: 1rem 0;
+    &_input {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      &_text {
+        background-color: $color-light;
+        border: 2px dotted $color-light;
+        border-radius: 1rem;
+        color: $color-dark;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-right: 0.5rem;
+        padding: 0.75rem 1rem;
+        width: 100%;
+
+        &:focus-within {
+          border: 2px solid $color-primary;
+          outline: 2px solid $color-primary;
+        }
+      }
+      &_button {
+        background-color: $color-primary;
+        border: 0;
+        border-radius: 1rem;
+        color: $color-dark;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 0.75rem 1.5rem;
+        &[disabled="true"] {
+          background-color: rgba($color-primary, 0.6);
+        }
+      }
+    }
+    &_seperator {
+      background-color: $color-primary;
+      height: 2px;
+      margin: 2rem 0;
+      width: 100%;
+    }
+    &_list {
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      &_item {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 0;
+        width: 100%;
+        &_text {
+          align-items: center;
+          display: inline-flex;
+          i {
+            font-size: 1.2rem;
+            margin-right: 1rem;
+          }
+          p {
+            font-size: 1.2rem;
+          }
+        }
+        &_icon {
+          margin-left: 0.5rem;
+          button.btn-primary {
+            background-color: $color-primary;
+            border: 0;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            i {
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $color-dark-2;
+  padding: 1rem 0;
+  text-align: center;
+  width: 100%;
+}

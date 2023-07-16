@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <section class="ToDoCard">
+      <div class="ToDoCard_header">
+        <h1>To-Do List</h1>
+        <img src="/assets/images/ToDoList.svg" alt="To Do List Icon" />
+      </div>
+      <div class="ToDoCard_body">
+        <div class="ToDoCard_body_input">
+          <input
+            class="ToDoCard_body_input_text"
+            type="text"
+            placeholder="Add your task"
+            id="ToDoAddText" />
+          <button
+            class="ToDoCard_body_input_button"
+            id="ToDoAddButton"
+            disabled="true">
+            Save
+          </button>
+        </div>
+        <div class="ToDoCard_body_seperator"></div>
+        <div class="ToDoCard_body_list">
+          <ul class="ToDoCard_body_list_container"></ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Made in ❤️ in India</p>
+    </footer>
+  </body>
+  <script src="/assets/global.js"></script>
+</html>
