@@ -3,10 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do List</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Simple Todo List App | Organize and Manage Your Tasks</title>
+    <meta
+      name="title"
+      content="Simple Todo List App | Organize and Manage Your Tasks" />
+    <meta
+      name="description"
+      content="A user-friendly Todo List App that allows you to add, view, and delete tasks. Stay organized and manage your to-do list effortlessly. Tasks are stored in local storage for persistence across page reloads." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta
+      property="og:title"
+      content="Simple Todo List App | Organize and Manage Your Tasks" />
+    <meta
+      property="og:description"
+      content="A user-friendly Todo List App that allows you to add, view, and delete tasks. Stay organized and manage your to-do list effortlessly. Tasks are stored in local storage for persistence across page reloads." />
+    <meta property="og:image" content="" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="" />
+    <meta
+      property="twitter:title"
+      content="Simple Todo List App | Organize and Manage Your Tasks" />
+    <meta
+      property="twitter:description"
+      content="A user-friendly Todo List App that allows you to add, view, and delete tasks. Stay organized and manage your to-do list effortlessly. Tasks are stored in local storage for persistence across page reloads." />
+    <meta property="twitter:image" content="" />
+
+    <!-- Boxicons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet" />
+
+    <!-- Global CSS -->
     <link rel="stylesheet" href="/assets/style.css" />
   </head>
   <body>
@@ -32,6 +66,19 @@
         <div class="ToDoCard_body_seperator"></div>
         <div class="ToDoCard_body_list">
           <ul class="ToDoCard_body_list_container"></ul>
+        </div>
+      </div>
+      <div class="ToDoCard_footer">
+        <div class="ToDoCard_footer_delete">
+          <p class="ToDoCard_footer_delete_text">
+            You have <span id="pendingTaskNumber"></span> pending task
+            remaining.
+          </p>
+          <button
+            class="ToDoCard_footer_delete_button"
+            id="ToDoDeleteAllButton">
+            Delete All
+          </button>
         </div>
       </div>
     </section>

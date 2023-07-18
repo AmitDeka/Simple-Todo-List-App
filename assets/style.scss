@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700&display=swap");
+@import "breakpoint";
 
 *,
 *::after,
@@ -13,6 +14,8 @@ $color-primary: #ffcb74;
 $color-light: #f6f6f6;
 $color-dark: #111111;
 $color-dark-2: #2f2f2f;
+$border-radius: 0.5rem;
+$box-shadow: 5px 10px 61px 0px rgba($color-dark-2, 0.8);
 
 body {
   align-items: center;
@@ -29,30 +32,43 @@ body {
 
 .ToDoCard {
   background-color: $color-dark-2;
-  border-radius: 0.5rem;
-  -webkit-box-shadow: 5px 10px 61px 0px rgba($color-dark-2, 0.8);
-  -moz-box-shadow: 5px 10px 61px 0px rgba($color-dark-2, 0.8);
-  box-shadow: 5px 10px 61px 0px rgba($color-dark-2, 0.8);
-  margin: 3rem 0;
-  padding: 2rem;
-  width: 600px;
+  border-radius: $border-radius;
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+  margin: 4rem auto;
+  padding: 1rem;
+  width: 90%;
   &_header {
     align-items: center;
     display: inline-flex;
     h1 {
-      font-size: 3rem;
+      font-size: 2rem;
       margin-right: 1rem;
+      @include breakpoint(md) {
+        font-size: 2.5rem;
+      }
+      @include breakpoint(xl) {
+        font-size: 3rem;
+      }
     }
     img {
       height: auto;
       max-width: 100%;
-      width: 3.5rem;
+      width: 2.5rem;
+      @include breakpoint(md) {
+        font-size: 3rem;
+      }
+      @include breakpoint(xl) {
+        font-size: 3.5rem;
+      }
     }
   }
   &_body {
     padding: 1rem 0;
     &_input {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       width: 100%;
       &_text {
@@ -60,12 +76,19 @@ body {
         border: 2px dotted $color-light;
         border-radius: 1rem;
         color: $color-dark;
-        font-size: 1.5rem;
-        font-weight: 500;
+        font-size: 1rem;
+        font-weight: 400;
         margin-right: 0.5rem;
-        padding: 0.75rem 1rem;
+        padding: 0.5rem 0.7rem;
         width: 100%;
-
+        @include breakpoint(md) {
+          font-size: 1.25rem;
+          padding: 0.6rem 0.85rem;
+        }
+        @include breakpoint(xl) {
+          font-size: 1.5rem;
+          padding: 0.7rem 1rem;
+        }
         &:focus-within {
           border: 2px solid $color-primary;
           outline: 2px solid $color-primary;
@@ -76,19 +99,44 @@ body {
         border: 0;
         border-radius: 1rem;
         color: $color-dark;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 600;
-        padding: 0.75rem 1.5rem;
+        margin-top: 0.75rem;
+        padding: 0.5rem 0.7rem;
         &[disabled="true"] {
           background-color: rgba($color-primary, 0.6);
         }
+        @include breakpoint(md) {
+          font-size: 1.25rem;
+          margin-top: 0rem;
+          padding: 0.6rem 0.85rem;
+        }
+        @include breakpoint(xl) {
+          font-size: 1.5rem;
+          padding: 0.7rem 1rem;
+        }
+      }
+      @include breakpoint(md) {
+        flex-direction: row;
+        font-size: 1.25rem;
+        padding: 0.6rem 0.85rem;
+      }
+      @include breakpoint(xl) {
+        font-size: 1.25rem;
+        padding: 0.6rem 0.85rem;
       }
     }
     &_seperator {
       background-color: $color-primary;
       height: 2px;
-      margin: 2rem 0;
+      margin: 1.5rem 0;
       width: 100%;
+      @include breakpoint(md) {
+        margin: 1.75rem 0;
+      }
+      @include breakpoint(xl) {
+        margin: 2rem 0;
+      }
     }
     &_list {
       ul {
@@ -98,17 +146,31 @@ body {
       &_item {
         display: flex;
         justify-content: space-between;
-        margin: 1rem 0;
+        margin: 0 0 1rem 0;
         width: 100%;
         &_text {
           align-items: center;
           display: inline-flex;
           i {
-            font-size: 1.2rem;
-            margin-right: 1rem;
+            font-size: 1rem;
+            margin-right: 0.5rem;
+            @include breakpoint(md) {
+              font-size: 1.2rem;
+              margin-right: 1rem;
+            }
+            @include breakpoint(xl) {
+              font-size: 1.2rem;
+              margin-right: 1rem;
+            }
           }
           p {
-            font-size: 1.2rem;
+            font-size: 1rem;
+            @include breakpoint(md) {
+              font-size: 1.1rem;
+            }
+            @include breakpoint(xl) {
+              font-size: 1.2rem;
+            }
           }
         }
         &_icon {
@@ -116,15 +178,75 @@ body {
           button.btn-primary {
             background-color: $color-primary;
             border: 0;
-            border-radius: 0.5rem;
-            padding: 0.5rem;
+            border-radius: $border-radius;
+            padding: 0.3rem;
             i {
-              font-size: 1.25rem;
+              font-size: 1rem;
+              @include breakpoint(md) {
+                font-size: 1.175rem;
+              }
+              @include breakpoint(xl) {
+                font-size: 1.25rem;
+              }
+            }
+            @include breakpoint(md) {
+              padding: 0.4rem;
+            }
+            @include breakpoint(xl) {
+              padding: 0.5rem;
             }
           }
         }
       }
     }
+  }
+  &_footer {
+    &_delete {
+      align-items: center;
+      display: inline-flex;
+      justify-content: space-between;
+      width: 100%;
+      &_text {
+        color: $color-light;
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-right: 0.75rem;
+        @include breakpoint(md) {
+          font-size: 0.9rem;
+        }
+        @include breakpoint(xl) {
+          font-size: 1rem;
+        }
+      }
+      &_button {
+        background-color: $color-primary;
+        border: 0;
+        border-radius: 1rem;
+        color: $color-dark;
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 0.75rem 1rem;
+        white-space: nowrap;
+        &[disabled="true"] {
+          background-color: rgba($color-primary, 0.6);
+        }
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    width: 80%;
+  }
+  @include breakpoint(md) {
+    padding: 1.5rem;
+    width: 70%;
+  }
+  @include breakpoint(lg) {
+    margin: 3rem auto;
+    padding: 2rem;
+  }
+  @include breakpoint(xl) {
+    width: 600px;
   }
 }
 
