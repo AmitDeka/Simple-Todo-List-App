@@ -4,6 +4,7 @@ self.addEventListener("install", (e) => {
       try {
         return await cache.addAll([
           "./",
+          "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css",
           "./assets/style.css",
           "./assets/global.js",
           "./assets/images/favicon/android-chrome-192x192.png",
