@@ -4,6 +4,8 @@ const todoTaskList = document.querySelector(".ToDoCard_body_list_container");
 const pendingTaskNumber = document.getElementById("pendingTaskNumber");
 const todoTaskDeleteAllButton = document.getElementById("ToDoDeleteAllButton");
 
+const downloadAppButton = document.getElementById("downloadApp_button");
+
 if (todoTaskText && todoTaskButton) {
   todoTaskText.onkeyup = () => {
     let taskData = todoTaskText.value;
@@ -82,3 +84,25 @@ if (todoTaskText && todoTaskButton) {
     showTaskList();
   };
 }
+
+//
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("sw.js")
+    .then((registration) => {
+      console.log(registration);
+      console.log("Service Workker Registered");
+    })
+    .catch((error) => {
+      console.log("Service Workker Registration Failed");
+      console.log(error);
+    });
+}
+
+downloadAppButton.addEventListener("click", async () => {
+  hideInstallPromotion();
+  deferredPrompt.prompt();
+  const { outcome } = await deferredPrompt.userChoice;
+  console.log(`User response to the install prompt: ${outcome}`);
+  deferredPrompt = null;
+});

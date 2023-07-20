@@ -1,0 +1,40 @@
+{
+  "name": "Simple Todo List App",
+  "short_name": "Todo App",
+
+  "icons": [
+    {
+      "src": "/assets/images/Icon-144.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/Icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/Icon-196.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/Icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+
+  "start_url": ".",
+
+  "display": "standalone",
+
+  "background_color": "#111111",
+  "theme_color": "#ffcb74",
+
+  "description": "A user-friendly Todo List App that allows you to add, view, and delete tasks. Stay organized and manage your to-do list effortlessly. Tasks are stored in local storage for persistence across page reloads."
+}
