@@ -1,8 +1,8 @@
 self.addEventListener("install", (e) => {
   e.waitUntil(
-    caches.open("static").then((cache) => {
-      return cache
-        .addAll([
+    caches.open("static").then(async (cache) => {
+      try {
+        return await cache.addAll([
           "./",
           "./assets/style.css",
           "./assets/images/favicon/android-chrome-192x192.png",
@@ -16,10 +16,10 @@ self.addEventListener("install", (e) => {
           "./assets/images/Icon-196.png",
           "./assets/images/Icon-512.png",
           "./assets/images/ToDoList.svg",
-        ])
-        .catch((error) => {
-          console.error("Cache addAll error:", error);
-        });
+        ]);
+      } catch (error) {
+        console.error("Cache addAll error:", error);
+      }
     })
   );
 });
