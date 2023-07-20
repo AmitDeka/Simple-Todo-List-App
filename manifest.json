@@ -1,6 +1,7 @@
 {
   "name": "Simple Todo List App",
   "short_name": "Todo App",
+  "description": "A user-friendly Todo List App that allows you to add, view, and delete tasks. Stay organized and manage your to-do list effortlessly. Tasks are stored in local storage for persistence across page reloads.",
 
   "icons": [
     {
@@ -29,12 +30,10 @@
     }
   ],
 
-  "start_url": ".",
+  "start_url": "/",
 
   "display": "standalone",
 
   "background_color": "#111111",
-  "theme_color": "#ffcb74",
-
-  "description": "A user-friendly Todo List App that allows you to add, view, and delete tasks. Stay organized and manage your to-do list effortlessly. Tasks are stored in local storage for persistence across page reloads."
+  "theme_color": "#ffcb74"
 }

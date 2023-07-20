@@ -1,11 +1,11 @@
 self.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open("static").then((cache) => {
-      return cache.addAll([
-        "./",
-        "./assets/style.css",
-        "./assets/images/**.*.png",
-      ]);
+      return cache
+        .addAll(["./", "./assets/style.css", "./assets/images/**.*.png"])
+        .catch((error) => {
+          console.error("Cache addAll error:", error);
+        });
     })
   );
 });

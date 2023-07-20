@@ -85,7 +85,6 @@ if (todoTaskText && todoTaskButton) {
   };
 }
 
-//
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
     .register("sw.js")
@@ -98,11 +97,3 @@ if ("serviceWorker" in navigator) {
       console.log(error);
     });
 }
-
-downloadAppButton.addEventListener("click", async () => {
-  hideInstallPromotion();
-  deferredPrompt.prompt();
-  const { outcome } = await deferredPrompt.userChoice;
-  console.log(`User response to the install prompt: ${outcome}`);
-  deferredPrompt = null;
-});

@@ -287,37 +287,9 @@ body {
   }
 }
 
-.downloadApp {
-  bottom: 2rem;
-  box-shadow: 5px 10px 61px 0px rgba(47, 47, 47, 0.8);
-  position: absolute;
-  right: 1rem;
-}
-.downloadApp_button {
-  background-color: #ffcb74;
-  border: 0;
-  border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
-}
-.downloadApp_button i {
-  font-size: 1.5rem;
-}
-@media (min-width: 768px) {
-  .downloadApp {
-    right: 1.5rem;
-  }
-}
-@media (min-width: 1200px) {
-  .downloadApp {
-    right: 2rem;
-  }
-}
-
 footer {
   background-color: #2f2f2f;
   padding: 1rem 0;
-  position: relative;
   text-align: center;
   width: 100%;
 }/*# sourceMappingURL=style.css.map */

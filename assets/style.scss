@@ -250,33 +250,33 @@ body {
   }
 }
 
-.downloadApp {
-  bottom: 2rem;
-  box-shadow: $box-shadow;
-  position: absolute;
-  right: 1rem;
-  &_button {
-    background-color: $color-primary;
-    border: 0;
-    border-radius: 50%;
-    height: 3rem;
-    width: 3rem;
-    i {
-      font-size: 1.5rem;
-    }
-  }
-  @include breakpoint(md) {
-    right: 1.5rem;
-  }
-  @include breakpoint(xl) {
-    right: 2rem;
-  }
-}
+// .downloadApp {
+//   bottom: 2rem;
+//   box-shadow: $box-shadow;
+//   position: absolute;
+//   right: 1rem;
+//   &_button {
+//     background-color: $color-primary;
+//     border: 0;
+//     border-radius: 50%;
+//     height: 3rem;
+//     width: 3rem;
+//     i {
+//       font-size: 1.5rem;
+//     }
+//   }
+//   @include breakpoint(md) {
+//     right: 1.5rem;
+//   }
+//   @include breakpoint(xl) {
+//     right: 2rem;
+//   }
+// }
 
 footer {
   background-color: $color-dark-2;
   padding: 1rem 0;
-  position: relative;
+  // position: relative;
   text-align: center;
   width: 100%;
 }
