@@ -5,25 +5,25 @@
 
   "icons": [
     {
-      "src": "/assets/images/Icon-144.png",
+      "src": "./assets/images/Icon-144.png",
       "type": "image/png",
       "sizes": "144x144",
       "purpose": "any"
     },
     {
-      "src": "/assets/images/Icon-192.png",
+      "src": "./assets/images/Icon-192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any"
     },
     {
-      "src": "/assets/images/Icon-196.png",
+      "src": "./assets/images/Icon-196.png",
       "sizes": "196x196",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/assets/images/Icon-512.png",
+      "src": "./assets/images/Icon-512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"
