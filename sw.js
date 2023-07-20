@@ -5,6 +5,7 @@ self.addEventListener("install", (e) => {
         return await cache.addAll([
           "./",
           "./assets/style.css",
+          "./assets/global.js",
           "./assets/images/favicon/android-chrome-192x192.png",
           "./assets/images/favicon/android-chrome-512x512.png",
           "./assets/images/favicon/apple-touch-icon.png",
